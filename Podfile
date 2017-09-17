@@ -5,6 +5,8 @@ target 'GithubIssuesApp' do
 
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'Moya/RxSwift'
+pod 'Moya-ObjectMapper/RxSwift'
 
 end
 
