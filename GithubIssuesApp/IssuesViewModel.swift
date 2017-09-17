@@ -23,8 +23,6 @@ class IssuesViewModel: ViewModelType {
         let issues: Driver<[IssueModel]>
     }
 
-    init() {}
-
     func transform(input: Input) -> Output {
         _ = input.search.asObservable()
             .observeOn(MainScheduler.instance)
@@ -32,11 +30,8 @@ class IssuesViewModel: ViewModelType {
                 self.fetchIssues(repositoryPath: repositoryPath)
             })
 
-
         let issues = issueSubject.asObservable()
             .asDriver(onErrorJustReturn: [])
-
-
 
         return Output(issues: issues)
     }
