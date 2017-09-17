@@ -14,7 +14,6 @@
 		0291AF981F6E22EF00D96E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0291AF961F6E22EF00D96E11 /* Main.storyboard */; };
 		0291AF9A1F6E22EF00D96E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0291AF991F6E22EF00D96E11 /* Assets.xcassets */; };
 		0291AF9D1F6E22EF00D96E11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0291AF9B1F6E22EF00D96E11 /* LaunchScreen.storyboard */; };
-		02A5FA371F6E279700CB939F /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A5FA361F6E279700CB939F /* UITableView+Extensions.swift */; };
 		02A5FA391F6E2A0000CB939F /* IssuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A5FA381F6E2A0000CB939F /* IssuesViewModel.swift */; };
 		02C68B8D1F6E2BBC0003F23F /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C68B8C1F6E2BBC0003F23F /* GithubAPI.swift */; };
 		02C68B901F6E2EAC0003F23F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C68B8F1F6E2EAC0003F23F /* ViewModelType.swift */; };
@@ -31,7 +30,6 @@
 		0291AF991F6E22EF00D96E11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0291AF9C1F6E22EF00D96E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0291AF9E1F6E22EF00D96E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02A5FA361F6E279700CB939F /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		02A5FA381F6E2A0000CB939F /* IssuesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewModel.swift; sourceTree = "<group>"; };
 		02C68B8C1F6E2BBC0003F23F /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		02C68B8F1F6E2EAC0003F23F /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -52,6 +50,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024DB9011F6E49CC004AE695 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				02A5FA381F6E2A0000CB939F /* IssuesViewModel.swift */,
+				024DB8FD1F6E421C004AE695 /* IssueItemViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		024DB9021F6E49D7004AE695 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				024DB8F91F6E3677004AE695 /* IssueModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		024DB9031F6E49E0004AE695 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				02C68B8C1F6E2BBC0003F23F /* GithubAPI.swift */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
 		0291AF861F6E22EF00D96E11 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +96,9 @@
 		0291AF911F6E22EF00D96E11 /* GithubIssuesApp */ = {
 			isa = PBXGroup;
 			children = (
+				024DB9031F6E49E0004AE695 /* APIs */,
+				024DB9021F6E49D7004AE695 /* Models */,
+				024DB9011F6E49CC004AE695 /* ViewModels */,
 				02C68B8E1F6E2E9F0003F23F /* Common */,
 				0291AF921F6E22EF00D96E11 /* AppDelegate.swift */,
 				0291AF941F6E22EF00D96E11 /* RootViewController.swift */,
@@ -80,11 +106,6 @@
 				0291AF991F6E22EF00D96E11 /* Assets.xcassets */,
 				0291AF9B1F6E22EF00D96E11 /* LaunchScreen.storyboard */,
 				0291AF9E1F6E22EF00D96E11 /* Info.plist */,
-				02A5FA361F6E279700CB939F /* UITableView+Extensions.swift */,
-				02A5FA381F6E2A0000CB939F /* IssuesViewModel.swift */,
-				02C68B8C1F6E2BBC0003F23F /* GithubAPI.swift */,
-				024DB8F91F6E3677004AE695 /* IssueModel.swift */,
-				024DB8FD1F6E421C004AE695 /* IssueItemViewModel.swift */,
 			);
 			path = GithubIssuesApp;
 			sourceTree = "<group>";
@@ -238,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02A5FA371F6E279700CB939F /* UITableView+Extensions.swift in Sources */,
 				02C68B8D1F6E2BBC0003F23F /* GithubAPI.swift in Sources */,
 				02C68B901F6E2EAC0003F23F /* ViewModelType.swift in Sources */,
 				0291AF951F6E22EF00D96E11 /* RootViewController.swift in Sources */,

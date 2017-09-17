@@ -29,7 +29,6 @@ class RootViewController: UIViewController {
         setup()
     }
 
-
     func setup() {
         configureTableView()
         bindViewModel()

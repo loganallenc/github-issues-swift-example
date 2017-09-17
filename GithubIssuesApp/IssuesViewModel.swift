@@ -26,7 +26,6 @@ class IssuesViewModel: ViewModelType {
     init() {}
 
     func transform(input: Input) -> Output {
-
         _ = input.search.asObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { repositoryPath in
